@@ -68,7 +68,8 @@ function App() {
   }
 
   const readGoogleSheet =()=> {
-    fetch('https://sheetdb.io/api/v1/cu78sa76ap0rd')
+//     fetch('https://sheetdb.io/api/v1/cu78sa76ap0rd')
+    fetch('https://sheetdb.io/api/v1/wq1hyi725wm76')
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -80,7 +81,7 @@ function App() {
     readGoogleSheet();
     const interval = setInterval(() => {
       readGoogleSheet();
-    }, 60000);
+    }, 7200000);
     return () => clearInterval(interval);
   }, []);
 
